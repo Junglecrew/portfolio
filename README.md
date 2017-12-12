@@ -1,4 +1,4 @@
-# Сайт-портфолио Portfolio. 3nd stage to Profession
+# Сайт-портфолио Portfolio.3nd stage to Profession
 
 **Студент**: Дмитрий Петров
 
