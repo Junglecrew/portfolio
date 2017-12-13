@@ -13,5 +13,7 @@ Portfolio. 3nd stage to Profession
 #Инструкция по установке
 
 **npm i** --- Устанавливаем зависимости
+
 **npm start** --- Сборка проекта
+
 **npm run dev** --- запуск сервера
