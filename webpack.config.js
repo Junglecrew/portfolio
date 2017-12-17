@@ -19,13 +19,20 @@ module.exports = {
 				'index': PATHS.source + '/pages/index/index.js',
 				'blog': PATHS.source + '/pages/blog/blog.js',
 				'work': PATHS.source + '/pages/work/work.js',
+				'about': PATHS.source + '/pages/about/about.js',
 				'main': PATHS.source + '/js/main.js'
+				// 'map': PATHS.source + '/pages/includes/_map/_map.js'
 		},
 		output: {
 				path: PATHS.build,
 				filename: './js/[name].js'
 		},
 		plugins: [
+				// new HtmlWebpackPlugin({
+				// 		filename: '_header.html',
+				// 		chunks: ['_header', 'common'],
+				// 		template: PATHS.source + '/pages/includes/_header/_header.pug'
+				// }),
 				new HtmlWebpackPlugin({
 						filename: 'index.html',
 						chunks: ['index', 'common'],
@@ -40,6 +47,11 @@ module.exports = {
 						filename: 'work.html',
 						chunks: ['work', 'common'],
 						template: PATHS.source + '/pages/work/work.pug'
+				}),
+				new HtmlWebpackPlugin({
+						filename: 'about.html',
+						chunks: ['about', 'common'],
+						template: PATHS.source + '/pages/about/about.pug'
 				}),
 				new CleanWebpackPlugin('build'),
 				new ExtractTextPlugin('./css/[name].css'), 
