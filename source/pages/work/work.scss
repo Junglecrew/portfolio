@@ -113,21 +113,21 @@
 	margin: 0 auto 35px;
 }
 
-.works-intro {
-		margin: 0 auto;
-		border-radius: 5px;
-		width: 380px;
-		height: 295px;
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-		margin-top: 0px;
-}
+// .works-intro {
+// 		margin: 0 auto;
+// 		border-radius: 5px;
+// 		width: 380px;
+// 		height: 295px;
+// 		display: flex;
+// 		flex-direction: column;
+// 		overflow: hidden;
+// 		margin-top: 0px;
+// }
 
 .arrow-down__works {
 	margin: auto;
-	margin-bottom: 135px;
-	margin-top: 230px;
+	margin-bottom: 50px;
+	// margin-top: 230px;
 	z-index: 1;
 	svg {
 		fill: #c3d5cb;
@@ -196,7 +196,7 @@
 
 .feedback {
 	margin-top: 70px;
-	margin-bottom: 150px;
+	margin-bottom: 350px;
 	width: 380px;
 	height: 460px;
 	background-color: rgba(229, 230,226,.6);

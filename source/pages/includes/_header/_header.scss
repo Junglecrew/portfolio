@@ -62,10 +62,10 @@
 .works-intro {
 		margin: 0 auto;
 		border-radius: 5px;
-		width: 380px;
-		height: 295px;
+		height: 80%;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-around;
 		overflow: hidden;
 		margin-top: 0px;
 }
@@ -93,11 +93,39 @@
 	line-height: 34px;
 	font-smoothing: antialiased;
 	margin: 0 auto 10px;
+	text-align: center;
+
+	
 
 }
 
-.auth-intro__descr {
+.auth-intro__descr, .auth-intro__title {
 	color: #fff;
 	font-family: $mediumfont;
 	margin: 0 auto 35px;
+	text-align: center;
+}
+
+.auth-intro__title {
+	display: block;
+	z-index: 1;
+	&__text {
+		font-size: 63px;
+		line-height: 53px;
+		font-family: $titles;
+		text-transform: uppercase;
+		margin: 0;
+		text-align: center;
+	}
+	&__hr {
+		margin: 30px auto;
+		width: 90px;
+		border-bottom: 3px solid black;
+	}
+}
+
+.works-intro__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }

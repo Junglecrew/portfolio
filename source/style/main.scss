@@ -17,7 +17,8 @@ $bolditalic: 'robotobold_italic';
 * {
 	font-size: 16px;
 	font-family: $mainfont;
-	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 blockquote p {

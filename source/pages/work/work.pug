@@ -1,10 +1,14 @@
 extends ../base
 
+block variables
+	- title = ''
+	- name = 'Дмитрий Петров'
+	- descr = 'Личный сайт веб разработчика'
 block head
 	meta(charset="UTF-8")
 	title Мои работы
 block content
-	section.works-section
+	header.works-section
 		block header
 		include ../includes/_header/_header
 		//- .auth-intro__name

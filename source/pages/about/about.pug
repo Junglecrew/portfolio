@@ -1,5 +1,8 @@
 extends ../base
-
+block variables
+	- title = ''
+	- name = 'Дмитрий Петров'
+	- descr = 'Личный сайт веб разработчика'
 block head
 	meta(charset="UTF-8")
 	title Обо мне
@@ -13,9 +16,10 @@ block content
 		.about-content
 			.about-left-side
 				.side-title
-					h2.side-title__text
-						|Обо мне
-					hr.side-title__hr
+					.section-title
+						h2.section-title__text
+							|Обо мне
+						hr.section-title__hr
 				.side-descr
 					.side-decsr__avatar
 						.avatar-img(style="background-image: url('images/avatar-about.jpg'); background-position: 77% 0%;  background-size: cover; transform:scale(-1, 1);")
@@ -38,18 +42,8 @@ block content
 				.side-content
 					p.side-descr__info
 						| Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.					
+				include ../includes/_skills/_skills
 
-				ul.skills-list
-					each item in ['Frontend', 'Backend', 'Workflow']
-						li.skills-list__item
-							.skills-row
-								.skills-row__title #{item}
-								ul.skills-row__list
-									each skill in ['Html5', 'css3', 'JavaScript']
-										li.skills-row__item
-											.skill
-												svg.skill__circle
-												.skill__title #{skill}
 	section.map
 		include ../includes/_map/_map
 		.map__data

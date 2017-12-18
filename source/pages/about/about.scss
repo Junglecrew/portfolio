@@ -2,13 +2,13 @@
 @import '../includes/_header/_header.scss'; 
 @import '../includes/_footer/_footer.scss';
 @import '../includes/_map/_map.scss';
+@import '../includes/_skills/_skills.scss'; 
 
 .about-header {
 	background-image: url('../../img/main_bg.jpg');
 	height: 100vh;
 	width: 100%;
 	background-size: cover;
-
 }
 
 .about-figure-cut {
@@ -44,10 +44,29 @@
 .about-right-side {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	width: 50%;
 	background-color: #f4f5f0;
 }
+
+.section-title {
+	display: block;
+	margin: 70px auto 0;
+	z-index: 1;
+	&__text {
+		font-size: 63px;
+		line-height: 53px;
+		font-family: $titles;
+		text-transform: uppercase;
+		margin: 0;
+		text-align: center;
+	}
+	&__hr {
+		margin: 30px auto;
+		width: 90px;
+		border-bottom: 3px solid black;
+	}
+}
+
 
 .side-title {
 	display: block;
@@ -71,7 +90,7 @@
 }
 
 .side-descr {
-	margin: 0 20px;
+	margin: 0 auto;
 	width: 50%;
 	display: flex;
 	flex-direction: column;
@@ -88,6 +107,7 @@
 		color: #566358;
 		text-align: center;
 		margin: 0;
+		text-transform: uppercase;
 		}
 		&__hr {
 		margin: 20px auto;
@@ -109,7 +129,7 @@
 .side-descr__info {
 	line-height: 24px;
 	color: #566358;
-	margin: 0;
+	margin: 0 0 15px;
 }
 
 .map {

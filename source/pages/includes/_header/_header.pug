@@ -10,10 +10,14 @@
 	.hamburger-menu
 			+icon('hamburger','white-mod')
 .works-intro
-	.avatar.auth-intro__avatar
-		.avatar__pic(style="background-image: url('images/avatar.jpg'); background-position: 79% 0%;  background-size: 350%")
-		img.visuallyHidden(src=require("../../img/avatar.jpg"))
-	.auth-intro__name
-		| Дмитрий Петров
-	.auth-intro__descr
-		| Личный сайт веб разработчика
+	.works-intro__info
+		.avatar.auth-intro__avatar
+			.avatar__pic(style="background-image: url('images/avatar.jpg'); background-position: 79% 0%;  background-size: 350%")
+			img.visuallyHidden(src=require("../../img/avatar.jpg"))
+		.auth-intro__name
+				| #{name}
+		.auth-intro__title
+			h2.section-title__text
+				| #{title}
+		.auth-intro__descr
+				| #{descr}
