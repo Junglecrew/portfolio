@@ -1,6 +1,5 @@
 extends ../base
 block variables
-	- title = ''
 	- name = 'Дмитрий Петров'
 	- descr = 'Личный сайт веб разработчика'
 block head
@@ -16,18 +15,20 @@ block content
 		.about-content
 			.about-left-side
 				.side-title
-					.section-title
-						h2.section-title__text
+					.section-title.section-title_about
+						h1.section-title__text
 							|Обо мне
-						hr.section-title__hr
+					.section-title__shadow.section-title__shadow_about-section
+						+shadowTitle('about_header','header_style')
 				.side-descr
 					.side-decsr__avatar
 						.avatar-img(style="background-image: url('images/avatar-about.jpg'); background-position: 77% 0%;  background-size: cover; transform:scale(-1, 1);")
 						img.visuallyHidden(src=require("../../img/avatar-about.jpg"))
-					.subtitle
-						h3.subtitle__text
-							| Кто я
-						hr.subtitle__hr
+					.side-descr__title
+						.subtitle
+							h3.subtitle__text
+								| Кто я
+							//- hr.subtitle__hr
 					p.side-descr__info
 						|Я веб разработчик из Калининграда. Мне 29 лет.
 						|Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
@@ -38,7 +39,6 @@ block content
 					.subtitle
 						h3.subtitle__text
 							| Чем я могу быть вам полезен
-						hr.subtitle__hr
 				.side-content
 					p.side-descr__info
 						| Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.					
@@ -52,7 +52,6 @@ block content
 					.subtitle.subtitle_contacts
 						h3.subtitle__text
 							| Контакты
-						hr.subtitle__hr
 				ul.contacts__list
 					-
 						var contacts = [

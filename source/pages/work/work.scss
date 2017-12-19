@@ -2,8 +2,9 @@
 @import '../includes/_header/_header.scss'; 
 @import '../includes/_footer/_footer.scss'; 
 
-.works-section {
+.works-header {
 	background-image: url('../../img/main_bg.jpg');
+	background-size: cover;
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -13,89 +14,12 @@
 .figure-cut {
 	position: absolute;
 	z-index: 0;
-	bottom: 0;
+	bottom: -3px;
 	width: 100%;
-	height: 340px;
-	background-image: url('../../img/bg.svg')
+	margin-top: -115px;
+	fill: white;
 }
 
-// .top-bar {
-// 	padding-top: 28px;
-// 	display: flex;
-// 	justify-content: space-between;
-// 	height: 30px;
-// }
-
-
-// .socials {
-// 	width: 140px;
-// 	&__index {
-//  	margin: 0 auto;
-//  	}
-// 	&__top {
-// 		width: 138px;
-// 		margin: 0 0 0 30px;
-// 	}
-// }
-
-// .social__list {
-// 	display: flex;
-// 	// justify-content: space-between;
-// }
-
-// .social__item {
-// 	margin-right: 25px;
-// 	&:last-child {
-// 		margin-right: 0;
-// 	}
-// }
-
-// .icon {
-// 	height: 22px;
-// 	width: 30px;
-// 	transition: .2s;
-// 	&.standard-mod {
-// 		fill:#8e9c99;
-// 	}
-
-// 	&.white-mod {
-// 		fill: #fff;
-// 	}
-// 	&.footer-mod {
-// 		fill:#8e9c99;;
-// 		&:hover {
-// 			fill: #fff;
-// 		}
-// 	}
-
-// 	&:hover {
-// 		fill: $green;
-// 		cursor: pointer;
-		
-// 	}
-// }
-
-// .hamburger-menu {
-// 	margin-right: 30px;
-// }
-
-// .avatar {
-// 	width: 140px;
-// 	height: 140px;
-// 	border-radius: 50%;
-// 	overflow: hidden;
-// }
-
-// .avatar__pic {
-// 	width: 140px;
-// 	height: 140px;
-// }
-
-
-
-// .auth-intro__avatar{
-// 	margin: 38px auto 20px;
-// }
 
 .auth-intro__name {
 	color: #fff;
@@ -135,21 +59,49 @@
 }
 
 .section-title {
+	position: relative;
 	display: block;
-	margin: 70px auto 0;
 	z-index: 1;
+	&::after {
+		display: block;
+		content: "";
+		margin: 35px auto;
+		width: 90px;
+		border-bottom: 3px solid #373e42;			
+	}
 	&__text {
 		font-size: 63px;
 		line-height: 53px;
 		font-family: $titles;
 		text-transform: uppercase;
-		margin: 0; 
+		margin: 60px auto 0;
 	}
 	&__hr {
 		margin: 30px auto;
 		width: 90px;
 		border-bottom: 3px solid black;
 	}
+}
+.section-title_works {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #373e42;
+}
+
+.section-title__shadow {
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	opacity: .1;
+	cursor: default;
+}
+
+.header_style {
+	fill: #93c42e;
+	width: 100%;
+	height: 100%;
 }
 
 .works-slider {

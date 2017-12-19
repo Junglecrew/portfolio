@@ -83,7 +83,7 @@
 }
 
 .auth-intro__avatar{
-	margin: 38px auto 20px;
+	margin: 0 auto 20px;
 }
 
 .auth-intro__name {
@@ -102,7 +102,7 @@
 .auth-intro__descr, .auth-intro__title {
 	color: #fff;
 	font-family: $mediumfont;
-	margin: 0 auto 35px;
+	// margin: 0 auto 35px;
 	text-align: center;
 }
 
@@ -128,4 +128,28 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+}
+
+.auth-section {
+	&__title {
+	position: relative;
+	display: block;
+	z-index: 1;
+		&::after {
+			display: block;
+			content: "";
+			margin: 35px auto;
+			width: 90px;
+			border-bottom: 3px solid #fff;			
+		}
+	}
+	&__text {
+		font-size: 63px;
+		color: #fff;
+		line-height: 53px;
+		font-family: $titles;
+		text-transform: uppercase;
+		margin: 0 auto;
+		text-align: center;
+		} 
 }
