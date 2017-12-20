@@ -96,6 +96,7 @@
 	z-index: -1;
 	opacity: .1;
 	cursor: default;
+	top: 0;
 }
 
 .header_style {
@@ -142,8 +143,11 @@
 .reviews__item {
 	margin: 0 10px;
 	display: block;
-	background-color: grey;
+	background-color: transparent;
 	width: 50%;
+	display: flex;
+	flex-direction: column;
+
 }
 
 .feedback {
@@ -155,3 +159,160 @@
 	border-radius: 5px;
 }
 
+.auth-section__title::after {
+	display: none;
+}
+
+.reviews__avatar {
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	margin: 0 auto 20px;
+	overflow: hidden;
+
+}
+
+.reviews__pic {
+	width: 75px;
+	height: 75px;
+	background-position: center;
+}
+
+.reviews {
+	&__text {
+		position: relative;
+		font-family: $italic;
+		line-height: 26px;
+		margin-bottom: 20px;
+		&::after {
+			content: "";
+			height: 55px;
+			width: 80px;
+			display: block;
+			position: absolute;
+			top: -20px;
+			background-image: url('../../img/rev_quotes.png');
+		}
+	}
+	&__name span{
+		font-family: $bolditalic;
+		color:$lightgreen;
+		text-align: center;
+		line-height: 24px;
+		display: block;
+	}
+	&__occ span {
+		font-family: $italic;
+		text-align: center;
+		display: block;
+		
+		&::before {
+			content: "\2014";
+			margin-right: 5px;
+		}
+	}
+
+}
+
+.feedback__title {
+	margin: 25px 0 35px;
+}
+
+.subtitle {
+		color: #566358;	
+		&__text {
+		font-family: $titles;
+		font-size: 35px;
+		text-align: center;
+		margin: 0;
+		text-transform: uppercase;
+		}
+		// &__hr {
+		// margin: 20px auto;
+		// width: 90px;
+		// border-bottom: 3px solid #566358;
+		// }
+		&::after {
+			display: block;
+			content: "";
+			margin: 20px auto;
+			width: 90px;
+			border-bottom: 3px solid #566358;			
+		}
+		
+}
+
+.feedback-form {
+	position: relative;
+}
+
+.feedback-form__elem {
+	display: block;
+	margin: 0 20px;
+}
+
+.feedback-form__input {
+	height: 45px;
+	border: 0px solid;
+	border-radius: 22px;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 17px 17px;
+	box-sizing: border-box;
+	resize: none;
+	outline: 0;
+	color: $darkgreen;
+	&::placeholder {
+		opacity: .5;
+	}
+	&:focus {
+	box-shadow: 0px 0px 3px $green;
+	}
+}
+
+.feedback-form__textarea {
+	margin: 0 20px;
+}
+.feedback-form__input--comment {
+	height: 140px;
+	box-sizing: border-box;
+}
+
+.feedback-form__controls {
+	width: 100%;
+	height: 45px;
+	position: absolute;
+	bottom: -45px;
+	border-radius: 0 0 5px 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0 auto;
+	height: 45px;
+	background-color: $green;
+	transition: .2s;
+	border:0;
+	border-right: 2px solid #a6bda3;
+	border-radius: 0 0 0 5px;
+	align-items: center;
+	&:hover {
+		background-color: #538643;
+		cursor: pointer;
+	}
+	&:last-child {
+		border: 0px;
+		border-radius: 0 0 5px 0;
+	}
+	span {
+		display: block;
+		color: #fff;
+		text-align: center;
+		font-family: $mediumfont;
+	}
+}

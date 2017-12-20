@@ -8,36 +8,73 @@ block content
 			button.auth-button
 				| Авторизоваться
 			.auth
-				.auth-intro
-					.avatar.auth-intro__avatar
-						.avatar__pic(style="background-image: url('images/avatar.jpg'); background-position: 79% 0%;  background-size: 350%")
-						img.visuallyHidden(src=require("../../img/avatar.jpg"))
-					.auth-intro__name
-						| Дмитрий Петров
-					.auth-intro__descr
-						| Личный сайт веб разработчика
-					.auth-intro__socials
-						.socials.socials__index
-							ul.social__list
-								li.social__item 
-									+icon('vk','standard-mod')
-								li.social__item 
-									+icon('github','standard-mod')
-								li.social__item 
-									+icon('in','standard-mod')
-					.auth-intro__buttons
-						ul.buttons__list
-							li.buttons__item 
-								a(href='./work.html').buttons__link
-									| Мои работы
-							li.buttons__item
-								a(href='./about.html').buttons__link
-									| Обо мне
-							li.buttons__item
-								a(href='./blog.html').buttons__link
-									|Блог
-					.test-block
-				.auth-form
+				//- .auth-intro
+				//- 	.avatar.auth-intro__avatar
+				//- 		.avatar__pic(style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%")
+				//- 		img.visuallyHidden(src=require("../../img/main-avatar.jpg"))
+				//- 	.auth-intro__name
+				//- 		| Дмитрий Петров
+				//- 	.auth-intro__descr
+				//- 		| Личный сайт веб разработчика
+				//- 	.auth-intro__socials
+				//- 		.socials.socials__index
+				//- 			ul.social__list
+				//- 				li.social__item 
+				//- 					+icon('vk','standard-mod')
+				//- 				li.social__item 
+				//- 					+icon('github','standard-mod')
+				//- 				li.social__item 
+				//- 					+icon('in','standard-mod')
+				//- 	.auth-intro__buttons
+				//- 		ul.buttons__list
+				//- 			li.buttons__item 
+				//- 				a(href='./work.html').buttons__link
+				//- 					| Мои работы
+				//- 			li.buttons__item
+				//- 				a(href='./about.html').buttons__link
+				//- 					| Обо мне
+				//- 			li.buttons__item
+				//- 				a(href='./blog.html').buttons__link
+				//- 					|Блог
+				//- 	.test-block
+				.auth-backside
+					form.auth-form
+						.subtitle.subtitle__intro
+							h3.subtitle__text
+								| Авторизуйтесь
+						.auth-form__elem
+							label(label for="auth-login" name="auth-login" class="auth-form__label")
+							input(type="text" id="auth-login" class="auth-form__input" placeholder="Логин")
+						.auth-form__elem
+							label(label for="auth-password" name="auth-password" class="auth-form__label")
+							input(type="text" id="auth-password" class="auth-form__input" placeholder="Пароль")
+						.auth-form__elem
+							input(type="checkbox" name="auth-form__checkbox-name" id="ch1" class="auth-form__checkbox-name")
+							label(for="ch" class="auth-form__checkbox")
+								span 
+								|Я человек
+						.auth-form__question
+							span Вы точно не робот?
+						.auth-form__radios
+							.auth-form__radio
+								input(type="radio" name="r-choice" id="r1" class="auth-form__radio-elem")
+								label(for="r1" class="auth-form__radio-name")
+									span
+										| Да
+							.auth-form__radio
+								input(type="radio" name="r-choice" id="r2" class="auth-form__radio-elem")
+								label(for="r2" class="auth-form__radio-name")
+									span
+										| Не уверен
+							
+							
+
+						.auth-form__controls
+								button(type="submit" class="btn")
+									span: | На главную
+								button(type="reset" class="btn")
+									span: | Войти
+
 		.wellcome-footer
 			.wellcome-footer__text © Дмитрий Петров | создано с любовью в LoftSchool | 2017
 
