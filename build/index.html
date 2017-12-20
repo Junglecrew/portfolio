@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta charset="UTF-8">
+    <title>Document</title>
+  <link href="./css/index.css" rel="stylesheet"></head>
+  <body>
+    <div class="wellcome-page">
+      <div class="container">
+        <button class="auth-button">Авторизоваться</button>
+        <div class="auth">
+          <div class="auth-backside">
+            <form class="auth-form">
+              <div class="subtitle subtitle__intro">
+                <h3 class="subtitle__text">Авторизуйтесь</h3>
+              </div>
+              <div class="auth-form__elem">
+                <label class="auth-form__label" label for="auth-login" name="auth-login"></label>
+                <input class="auth-form__input" type="text" id="auth-login" placeholder="Логин">
+              </div>
+              <div class="auth-form__elem">
+                <label class="auth-form__label" label for="auth-password" name="auth-password"></label>
+                <input class="auth-form__input" type="text" id="auth-password" placeholder="Пароль">
+              </div>
+              <div class="auth-form__elem">
+                <input class="auth-form__checkbox-name" type="checkbox" name="auth-form__checkbox-name" id="ch1">
+                <label class="auth-form__checkbox" for="ch"><span> </span>Я человек</label>
+              </div>
+              <div class="auth-form__question"><span>Вы точно не робот?</span></div>
+              <div class="auth-form__radios">
+                <div class="auth-form__radio">
+                  <input class="auth-form__radio-elem" type="radio" name="r-choice" id="r1">
+                  <label class="auth-form__radio-name" for="r1"><span>Да</span></label>
+                </div>
+                <div class="auth-form__radio">
+                  <input class="auth-form__radio-elem" type="radio" name="r-choice" id="r2">
+                  <label class="auth-form__radio-name" for="r2"><span>Не уверен</span></label>
+                </div>
+              </div>
+              <div class="auth-form__controls">
+                <button class="btn" type="submit"><span>На главную</span></button>
+                <button class="btn" type="reset"><span>Войти</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="wellcome-footer">
+        <div class="wellcome-footer__text">© Дмитрий Петров | создано с любовью в LoftSchool | 2017</div>
+      </div>
+    </div>
+  <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/index.js"></script></body>
+</html>
