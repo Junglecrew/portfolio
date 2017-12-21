@@ -514,7 +514,8 @@ template {
   font-size: 16px;
   font-family: "robotoregular";
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  outline: none; }
 
 blockquote p {
   font-family: "robotolight_italic"; }
@@ -551,6 +552,36 @@ h1, h2, h3 {
   border: 0;
   opacity: 0; }
 
+.icon {
+  height: 22px;
+  width: 30px;
+  transition: .2s; }
+  .icon.standard-mod {
+    fill: #8e9c99; }
+  .icon.white-mod {
+    fill: #fff; }
+  .icon.green-mod {
+    fill: #6c9c5a; }
+  .icon.footer-mod {
+    fill: #8e9c99; }
+    .icon.footer-mod:hover {
+      fill: #fff; }
+  .icon.login-main {
+    position: absolute;
+    height: 15px;
+    top: 15px;
+    left: 8px;
+    fill: #c4cbcd; }
+  .icon.password-main {
+    position: absolute;
+    height: 15px;
+    top: 15px;
+    left: 8px;
+    fill: #c4cbcd; }
+  .icon:hover {
+    fill: #6c9c5a;
+    cursor: pointer; }
+
 .top-bar {
   padding-top: 28px;
   display: flex;
@@ -575,24 +606,6 @@ h1, h2, h3 {
 
 .hamburger-menu {
   margin-right: 30px; }
-
-.icon {
-  height: 22px;
-  width: 30px;
-  transition: .2s; }
-  .icon.standard-mod {
-    fill: #8e9c99; }
-  .icon.white-mod {
-    fill: #fff; }
-  .icon.green-mod {
-    fill: #6c9c5a; }
-  .icon.footer-mod {
-    fill: #8e9c99; }
-    .icon.footer-mod:hover {
-      fill: #fff; }
-  .icon:hover {
-    fill: #6c9c5a;
-    cursor: pointer; }
 
 .works-intro {
   margin: 0 auto;
