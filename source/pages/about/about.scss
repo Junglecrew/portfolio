@@ -26,13 +26,20 @@
 }
 .traingle .right{
   fill: #f4f5f0;
+ 	@include tablets() {
+ 		fill: #ebefe2;
+  }
 }
 
 .about-content {
 	display: flex;
 	height: 100%;
 	width: 100%;
-
+	@include tablets() {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
 }
 
 .about-left-side {
@@ -40,13 +47,26 @@
 	justify-content: space-between;
 	width: 50%;
 	background-color: #ebefe2;
+	@include laptop() {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+ 	@include tablets() {
+		width: 100%;
+		padding-bottom: 45px;
+  }
 }
+
 .about-right-side {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 50%;
 	background-color: #f4f5f0;
+ 	@include tablets() {
+		width: 100%;
+  }
 }
 
 .section-title {
@@ -75,11 +95,29 @@
 		border-bottom: 3px solid black;
 	}
 }
+
+.section-title_about {
+	margin: 0px auto 70px;
+	@include laptop() {
+		margin: 0 auto;
+	}
+	@include tablets() {
+		margin: 50px auto 0;
+	}
+}
 .section-title__shadow {
-	width: 120%;
+	width: 135%;
+	top: -65px;
 	position: absolute;
 	z-index: -1;
 	opacity: .1;
+	@include tablets() {
+		top: 20px;
+	}
+	@include phones() {
+		top: -10px;
+		width: 100%;
+	}
 }
 .header_style {
 	fill: #93c42e;
@@ -89,7 +127,6 @@
 
 .side-title {
 	position: relative;
-	display: block;
 	margin: 5px auto 0;
 	z-index: 1;
 	display: flex;
@@ -110,10 +147,30 @@
 	width: 50%;
 	display: flex;
 	flex-direction: column;
+	@include laptop() {
+		margin: 0 80px;
+		width: auto;
+	}
+	@include tablets() {
+		margin: 0 140px;
+		width: auto;
+	}
+	@include phones() {
+	margin: 0 10px;
+	}
 }
 
 .side-content {
 	margin: 0 60px 0 40px;
+	@include laptop() {
+		margin: 0 25px;
+	}
+	@include tablets() {
+		margin: 0 140px;
+	}
+	@include phones() {
+		margin: 0 10px;
+	}
 }
 
 .subtitle {
@@ -124,6 +181,9 @@
 		text-align: center;
 		margin: 0;
 		text-transform: uppercase;
+		@include tablets() {
+			margin: 50px auto 0;
+	}
 		}
 		// &__hr {
 		// margin: 20px auto;
@@ -159,6 +219,9 @@
 
 .side-descr__title {
 	margin-top: 30px;
+	@include phones() {
+		margin-top: 0;
+	}
 }
 
 .map {
@@ -168,6 +231,9 @@
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	@include phones() {
+	justify-content: flex-start;
+	}
 }
 
 .map__data {
@@ -177,6 +243,9 @@
 	border-radius: 10px;
 	z-index: 10;
 	font-family: $mediumfont;
+	@include phones() {
+		max-width: 100%;
+	}
 }
 
 .contacts__item {
@@ -191,3 +260,8 @@
 	}
 }
 
+
+
+.auth-section__title:after {
+		display: none;
+} 

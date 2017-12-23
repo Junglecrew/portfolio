@@ -19,14 +19,15 @@ block content
 	section.blog-main
 		.about-figure-cut
 			include ../../img/bg-about.svg
-		.blog-container
+		.main-container.main-container__blog
 			.blog-side
-				ul.articles
-					each title in articlesTitle
-						li.articles__item
-							.articles__title
-									a(class='articles__link',href='#'): |#{title}
-			.blog-content
+				.articles
+					ul.articles__list
+						each title in articlesTitle
+							li.articles__item
+								.articles__title
+										a(class='articles__link',href='#'): |#{title}
+			.blog-content.blog-content__container
 				.blog-article
 					.subtitle
 						.subtitle__text.subtitle__text_blog#sass: |Самое важное в SASS

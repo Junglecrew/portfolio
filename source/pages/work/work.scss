@@ -14,7 +14,7 @@
 .figure-cut {
 	position: absolute;
 	z-index: 0;
-	bottom: -3px;
+	bottom: -4px;
 	width: 100%;
 	margin-top: -115px;
 	fill: white;
@@ -75,6 +75,11 @@
 		font-family: $titles;
 		text-transform: uppercase;
 		margin: 60px auto 0;
+		@include phones() {
+			// margin: 0 auto;
+			text-align: center;
+			
+		}	
 	}
 	&__hr {
 		margin: 30px auto;
@@ -88,6 +93,9 @@
 	flex-direction: column;
 	align-items: center;
 	color: #373e42;
+	@include phones() {
+		margin: 30px auto 0;
+		}	
 }
 
 .section-title__shadow {
@@ -97,6 +105,9 @@
 	opacity: .1;
 	cursor: default;
 	top: 0;
+	@include phones() {
+		// top: -60px;
+		}	
 }
 
 .header_style {
@@ -109,6 +120,10 @@
 	height: 100vh;
 	background-color: gray;
 	display: flex;
+	@include phones() {
+		flex-direction: column;
+		align-items: center;
+	}	
 	&__left {
 		background-color: #ebefe2;
 		width: 50%;
@@ -131,13 +146,17 @@
 
 .reviews {
 	display: block;
-	width: 770px;
+	max-width: 770px;
+
 }
 
 .reviews__list {
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+	@include phones() {
+		flex-direction: column;
+	}	
 }
 
 .reviews__item {
@@ -147,6 +166,11 @@
 	width: 50%;
 	display: flex;
 	flex-direction: column;
+	@include phones() {
+	width: 100%;
+	margin: 0 10px 35px;
+	}	
+
 
 }
 
@@ -157,6 +181,11 @@
 	height: 460px;
 	background-color: rgba(229, 230,226,.6);
 	border-radius: 5px;
+	@include phones() {
+		width: 90%;
+		
+
+	}	
 }
 
 .auth-section__title::after {

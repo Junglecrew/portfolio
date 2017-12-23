@@ -1,3 +1,28 @@
+// resolutions
+$desktop: 75rem;
+$laptop: 1200px;
+$tablets: 768px;
+$phones: 550px;
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+
 $green: #6c9c5a;
 $lightgreen: #4e8839;
 $darkgreen: #566358;
