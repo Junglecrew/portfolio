@@ -521,7 +521,6 @@ body {
   position: relative; }
 
 .wellcome-page {
-  background-image: url(../images/main_bg.jpg);
   background-size: cover;
   height: 100vh;
   position: relative; }
@@ -880,6 +879,22 @@ input[type="radio"]:checked + label .custom + .answer {
     text-align: center;
     font-size: 14px;
     line-height: 24px; }
+
+.Background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.Background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5)); }
 @font-face {
   font-family: 'robotobold';
   src: url(../css/fonts/roboto-bold.woff2) format("woff2"), url(../css/fonts/roboto-bold.woff) format("woff"), url(../css/fonts/roboto-bold.ttf) format("truetype");

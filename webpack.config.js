@@ -20,7 +20,8 @@ module.exports = {
 				'blog': PATHS.source + '/pages/blog/blog.js',
 				'work': PATHS.source + '/pages/work/work.js',
 				'about': PATHS.source + '/pages/about/about.js',
-				'main': PATHS.source + '/js/main.js'
+				'main': PATHS.source + '/js/main.js',
+				'webgl': PATHS.source + '/pages/index/water.js'
 				// 'map': PATHS.source + '/pages/includes/_map/_map.js'
 		},
 		output: {
@@ -35,7 +36,7 @@ module.exports = {
 				// }),
 				new HtmlWebpackPlugin({
 						filename: 'index.html',
-						chunks: ['index', 'common'],
+						chunks: ['index', 'common', 'webgl'],
 						template: PATHS.source + '/pages/index/index.pug'
 				}),
 				new HtmlWebpackPlugin({
@@ -61,9 +62,9 @@ module.exports = {
 				// new OptimizeCssAssetsPlugin({
 				// 		cssProcessorOptions: { discardComments: {removeAll: true } }
 				// }),
-				new StyleLintPlugin({
-						configFile: './.stylelintrc'
-				}),
+				// new StyleLintPlugin({
+				// 		configFile: './.stylelintrc'
+				// }),
 				new webpack.ProvidePlugin({
 						$: 'jquery',
 						jQuery: 'jquery'
@@ -107,14 +108,14 @@ module.exports = {
                     use: 'css-loader'
                 })
             },
-						{
-								test: /\.js$/,
-								enforce: "pre",
-								loader: "eslint-loader",
-								options: {
-										fix: true
-								}            
-						},
+						// {
+						// 		test: /\.js$/,
+						// 		enforce: "pre",
+						// 		loader: "eslint-loader",
+						// 		options: {
+						// 				fix: false
+						// 		}            
+						// },
 						{
 								test: /\.(jpg|png|svg)$/,
 								loader: 'file-loader',

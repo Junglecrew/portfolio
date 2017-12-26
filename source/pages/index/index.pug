@@ -3,6 +3,8 @@ block head
 	meta(charset="UTF-8")
 	title Document
 block content
+	.Background
+		canvas.Background-canvas
 	.wellcome-page
 		.container
 			button.auth-button
@@ -13,6 +15,8 @@ block content
 						.avatar.auth__avatar
 							.avatar__pic(style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%")
 							img.visuallyHidden(src=require("../../img/main-avatar.jpg"))
+							//- img.visuallyHidden(src=require("../../img/water.jpg"))
+							//- img.visuallyHidden(src=require("../../img/water-maps.jpg"))
 						.auth__name
 							| Дмитрий Петров
 						.auth__descr
@@ -76,8 +80,5 @@ block content
 										span: | На главную
 									button(type="reset" class="btn")
 										span: | Войти
-
 		.wellcome-footer
 			.wellcome-footer__text © Дмитрий Петров | создано с любовью в LoftSchool | 2017
-
-

@@ -1,7 +1,6 @@
 import 'normalize.css';
 import './index.scss';
 import '../../style/fonts.scss';
-
 // import './sprite_template.scss';
 // import 'sprite.scss';
 // import '../../img/sprite.svg';
@@ -11,7 +10,6 @@ console.log('in index.js');
 var authBtnTrigger = document.querySelector('.auth-button');
 var flip = document.querySelector('.auth');
 var form = document.querySelector('.container');
-
 
 function rotate(event) {
   flip.classList.add('rotated');
