@@ -15,8 +15,8 @@ block content
 						.avatar.auth__avatar
 							.avatar__pic(style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%")
 							img.visuallyHidden(src=require("../../img/main-avatar.jpg"))
-							img.visuallyHidden(src=require("../../img/water.jpg"))
-							img.visuallyHidden(src=require("../../img/water-maps.jpg"))
+							//- img.visuallyHidden(src=require("../../img/water.jpg"))
+							//- img.visuallyHidden(src=require("../../img/water-maps.jpg"))
 						.auth__name
 							| Дмитрий Петров
 						.auth__descr
@@ -54,7 +54,7 @@ block content
 							.auth-form__elem.auth-form__elem_password
 								+icon('password','password-main')
 								label(label for="auth-password" name="auth-password" class="auth-form__label")
-								input(type="text" id="auth-password" class="auth-form__input" placeholder="Пароль")
+								input(type="password" id="auth-password" class="auth-form__input" placeholder="Пароль")
 							.auth-form__check
 								input(type="checkbox" name="auth-form__checkbox-name" id="ch" class="auth-form__checkbox-name")
 								label(for="ch" class="auth-form__checkbox")
@@ -76,9 +76,9 @@ block content
 										span.answer
 												| Не уверен
 							.auth-form__controls
-									button(type="submit" class="btn")
+									button(type="button" class="btn" onclick="location.href='./about.html';")
 										span: | На главную
-									button(type="reset" class="btn")
+									button(type="submit" class="btn")
 										span: | Войти
 		.wellcome-footer
 			.wellcome-footer__text © Дмитрий Петров | создано с любовью в LoftSchool | 2017

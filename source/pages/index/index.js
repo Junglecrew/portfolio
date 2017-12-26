@@ -1,6 +1,8 @@
 import 'normalize.css';
 import './index.scss';
 import '../../style/fonts.scss';
+import '../../img/water.jpg';
+import '../../img/water-maps.jpg';
 // import './sprite_template.scss';
 // import 'sprite.scss';
 // import '../../img/sprite.svg';

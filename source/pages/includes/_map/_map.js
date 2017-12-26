@@ -10,10 +10,10 @@ export default function() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
     center: mapCenter,
-    draggable: false,
+    draggable: true,
     mapTypeControl: false,
     fullscreenControl: false,
-    zoomControl: false,
+    zoomControl: true,
     streetViewControl: false,
     styles: 
     [

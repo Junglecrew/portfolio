@@ -607,7 +607,7 @@ h1, h2, h3 {
 .hamburger-menu {
   margin-right: 30px; }
 
-.works-intro {
+.auth-intro {
   margin: 0 auto;
   border-radius: 5px;
   height: 80%;
@@ -659,7 +659,7 @@ h1, h2, h3 {
     width: 90px;
     border-bottom: 3px solid black; }
 
-.works-intro__info {
+.auth-intro__info {
   display: flex;
   flex-direction: column;
   justify-content: space-around; }

@@ -18,7 +18,7 @@
           <div class="auth">
             <div class="auth__intro">
               <div class="avatar auth__avatar">
-                <div class="avatar__pic" style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%;"></div><img class="visuallyHidden" src="images/main-avatar.jpg"><img class="visuallyHidden" src="images/water.jpg"><img class="visuallyHidden" src="images/water-maps.jpg">
+                <div class="avatar__pic" style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%;"></div><img class="visuallyHidden" src="images/main-avatar.jpg">
               </div>
               <div class="auth__name">Дмитрий Петров</div>
               <div class="auth__descr">Личный сайт веб разработчика</div>
@@ -69,7 +69,7 @@
                     <use xlink:href="images/sprite.svg#password"></use>
                   </svg>
                   <label class="auth-form__label" label for="auth-password" name="auth-password"></label>
-                  <input class="auth-form__input" type="text" id="auth-password" placeholder="Пароль">
+                  <input class="auth-form__input" type="password" id="auth-password" placeholder="Пароль">
                 </div>
                 <div class="auth-form__check">
                   <input class="auth-form__checkbox-name" type="checkbox" name="auth-form__checkbox-name" id="ch">
@@ -87,8 +87,8 @@
                   </div>
                 </div>
                 <div class="auth-form__controls">
-                  <button class="btn" type="submit"><span>На главную</span></button>
-                  <button class="btn" type="reset"><span>Войти</span></button>
+                  <button class="btn" type="button" onclick="location.href='./about.html';"><span>На главную</span></button>
+                  <button class="btn" type="submit"><span>Войти</span></button>
                 </div>
               </form>
             </div>

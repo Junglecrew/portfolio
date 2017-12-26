@@ -5,10 +5,13 @@
 .works-header {
 	background-image: url('../../img/main_bg.jpg');
 	background-size: cover;
-	height: 100vh;
+	height: 50vh;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	background-position-y: 30%;
+	
 }
 
 .figure-cut {
@@ -223,14 +226,14 @@
 			background-image: url('../../img/rev_quotes.png');
 		}
 	}
-	&__name span{
+	&__name {
 		font-family: $bolditalic;
 		color:$lightgreen;
 		text-align: center;
 		line-height: 24px;
 		display: block;
 	}
-	&__occ span {
+	&__occ {
 		font-family: $italic;
 		text-align: center;
 		display: block;
