@@ -22,6 +22,7 @@ module.exports = {
 				'about': PATHS.source + '/pages/about/about.js',
 				'main': PATHS.source + '/js/main.js',
 				'webgl': PATHS.source + '/pages/index/water.js'
+				// 'header': PATHS.source + '/pages/includes/_header/_header.js'
 				// 'map': PATHS.source + '/pages/includes/_map/_map.js'
 		},
 		output: {
@@ -41,17 +42,17 @@ module.exports = {
 				}),
 				new HtmlWebpackPlugin({
 						filename: 'blog.html',
-						chunks: ['blog', 'common'],
+						chunks: ['blog', 'common', 'main'],
 						template: PATHS.source + '/pages/blog/blog.pug'
 				}),
 				new HtmlWebpackPlugin({
 						filename: 'work.html',
-						chunks: ['work', 'common'],
+						chunks: ['work', 'common', 'main'],
 						template: PATHS.source + '/pages/work/work.pug'
 				}),
 				new HtmlWebpackPlugin({
 						filename: 'about.html',
-						chunks: ['about', 'common'],
+						chunks: ['about', 'common', 'main'],
 						template: PATHS.source + '/pages/about/about.pug'
 				}),
 				new CleanWebpackPlugin('build'),

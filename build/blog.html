@@ -5,8 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Блог</title>
-  <link href="./css/blog.css" rel="stylesheet"></head>
+  <link href="./css/blog.css" rel="stylesheet"><link href="./css/main.css" rel="stylesheet"></head>
   <body>
+    <div class="menu-open">
+      <div class="menu-open__left"></div>
+      <div class="menu-open__right"></div>
+    </div>
     <header class="blog-header">
       <div class="top-bar">
         <div class="socials socials__top">
@@ -29,9 +33,7 @@
           </ul>
         </div>
         <div class="hamburger-menu">
-          <svg class="icon icon-hamburger white-mod">
-            <use xlink:href="images/sprite.svg#hamburger"></use>
-          </svg>
+          <div class="hamburger" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
         </div>
       </div>
       <div class="auth-intro">
@@ -142,5 +144,5 @@
         </footer>
       </div>
     </section>
-  <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/blog.js"></script></body>
+  <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/blog.js"></script><script type="text/javascript" src="./js/main.js"></script></body>
 </html>

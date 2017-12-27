@@ -8,7 +8,10 @@
 			li.social__item 
 				+icon('in','white-mod')
 	.hamburger-menu
-			+icon('hamburger','white-mod')
+		div(class="hamburger" id="hamburger")
+			span.line
+			span.line
+			span.line
 .auth-intro
 	.auth-intro__info
 		.avatar.auth-intro__avatar
@@ -16,8 +19,9 @@
 			img.visuallyHidden(src=require("../../img/main-avatar.jpg"))
 		.auth-intro__name
 				| #{name}
-		.auth-section__title
-			h2.auth-section__text
-				| #{title}
+		if title
+			.auth-section__title
+				h2.auth-section__text
+					| #{title}
 		.auth-intro__descr
 				| #{descr}

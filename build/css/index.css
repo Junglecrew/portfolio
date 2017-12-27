@@ -487,6 +487,32 @@ h1, h2, h3 {
   border: 0;
   opacity: 0; }
 
+.menu-open {
+  display: flex;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%; }
+  .menu-open__left {
+    position: absolute;
+    top: 0;
+    left: -900px;
+    width: 50%;
+    height: 100vh;
+    transition: 1s;
+    background-color: rgba(126, 168, 109, 0.8); }
+  .menu-open__right {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -900px;
+    width: 50%;
+    transition: 1s;
+    background-color: rgba(126, 168, 109, 0.8); }
+
 .icon {
   height: 22px;
   width: 30px;

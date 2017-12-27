@@ -93,6 +93,34 @@ h1,h2,h3 {
     opacity: 0;
 }
 
+.menu-open {
+	display: flex;
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+	&__left {
+		position: absolute;
+		top: 0;
+		left: -900px;
+		width: 50%;
+		height: 100vh;
+		transition: 1s;
+		background-color: rgba(126,168,109, .8);
+	}
+	&__right {
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		right: -900px;
+		width: 50%;
+		transition: 1s;
+		background-color: rgba(126,168,109, .8);
+	}
+}
 
 .icon {
 	height: 22px;

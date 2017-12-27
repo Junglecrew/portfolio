@@ -6,8 +6,12 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <meta charset="UTF-8">
     <title>Обо мне</title>
-  <link href="./css/about.css" rel="stylesheet"></head>
+  <link href="./css/about.css" rel="stylesheet"><link href="./css/main.css" rel="stylesheet"></head>
   <body>
+    <div class="menu-open">
+      <div class="menu-open__left"></div>
+      <div class="menu-open__right"></div>
+    </div>
     <header class="about-header">
       <div class="top-bar">
         <div class="socials socials__top">
@@ -30,9 +34,7 @@
           </ul>
         </div>
         <div class="hamburger-menu">
-          <svg class="icon icon-hamburger white-mod">
-            <use xlink:href="images/sprite.svg#hamburger"></use>
-          </svg>
+          <div class="hamburger" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
         </div>
       </div>
       <div class="auth-intro">
@@ -41,9 +43,6 @@
             <div class="avatar__pic" style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%;"></div><img class="visuallyHidden" src="images/main-avatar.jpg">
           </div>
           <div class="auth-intro__name">Дмитрий Петров</div>
-          <div class="auth-section__title">
-            <h2 class="auth-section__text"></h2>
-          </div>
           <div class="auth-intro__descr">Личный сайт веб разработчика</div>
         </div>
       </div>
@@ -296,5 +295,5 @@
              © Дмитрий Петров | Создано с любовью в LoftSchool | 2017</span></div>
       </footer>
     </section>
-  <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/about.js"></script></body>
+  <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/about.js"></script><script type="text/javascript" src="./js/main.js"></script></body>
 </html>
