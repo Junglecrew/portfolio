@@ -1,5 +1,5 @@
-// @import '../../style/main.scss'; 
-@import '../includes/_header/_header.scss'; 
+@import '../../style/main.scss'; 
+// @import '../includes/_header/_header.scss'; 
 @import '../includes/_footer/_footer.scss';
 
 .blog-header {
@@ -81,20 +81,31 @@
 
 
 .blog-side {
-	// width: 28%;
+	width: 27%;
+
 	@include tablets() {
     display: none;
      }
+}
 
+.blog-side__left {
+	margin: 20px 100px 0 40px;
+}
+
+.articles {
+	width: 385px;
 }
 
 .articles__list {
-	margin: 0 100px 0 40px;	
+	// margin: 0 100px 0 40px;	
 }
 
 .articles__item {
 	margin: 20px 0;
 	text-align: right;
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 .articles__title {

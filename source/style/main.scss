@@ -95,6 +95,7 @@ h1,h2,h3 {
 
 .menu-open {
 	display: flex;
+	justify-content: space-around;
 	z-index: 0;
 	position: absolute;
 	top: 0;
@@ -102,6 +103,8 @@ h1,h2,h3 {
 	height: 100vh;
 	overflow: hidden;
 	width: 100%;
+	transition: 1s;
+	opacity: 0;
 	&__left {
 		position: absolute;
 		top: 0;
