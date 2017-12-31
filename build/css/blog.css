@@ -571,7 +571,7 @@ h1, h2, h3 {
     width: 50%;
     height: 100vh;
     transition: 1s;
-    background-color: rgba(126, 168, 109, 0.8); }
+    background-color: rgba(126, 168, 109, 0.9); }
   .menu-open__right {
     height: 100vh;
     position: absolute;
@@ -579,7 +579,7 @@ h1, h2, h3 {
     right: -900px;
     width: 50%;
     transition: 1s;
-    background-color: rgba(126, 168, 109, 0.8); }
+    background-color: rgba(126, 168, 109, 0.9); }
 
 .icon {
   height: 22px;
@@ -815,15 +815,60 @@ h1, h2, h3 {
 
 .blog-side {
   width: 27%; }
-  @media screen and (max-width: 768px) {
-    .blog-side {
-      display: none; } }
 
 .blog-side__left {
   margin: 20px 100px 0 40px; }
+  @media screen and (max-width: 768px) {
+    .blog-side__left {
+      display: none; } }
+
+.menu-tablets {
+  display: none;
+  transition: 1s; }
+  .menu-tablets .articles {
+    margin-right: 15px;
+    text-align: right;
+    z-index: 1; }
+  @media screen and (max-width: 768px) {
+    .menu-tablets {
+      height: 100vh;
+      width: 284px;
+      position: fixed;
+      background-color: #6c9c5a;
+      box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      z-index: 1;
+      top: 0;
+      left: 0; } }
+
+.menu-tablets__hidden {
+  left: -284px;
+  transition: 1s; }
+
+.menu-tablets__bg {
+  height: 100vh;
+  width: 284px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #6c9c5a; }
+  .menu-tablets__bg .open-menu {
+    display: block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #6c9c5a;
+    position: absolute;
+    top: 50%;
+    left: 238px;
+    z-index: -1;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: 0; }
 
 .articles {
-  width: 385px; }
+  max-width: 100%; }
 
 .articles__item {
   margin: 20px 0;
@@ -874,19 +919,32 @@ h1, h2, h3 {
 .content-text {
   line-height: 26px;
   margin-bottom: 70px; }
-  .content-text::after {
+
+.blog-article {
+  text-align: justify;
+  margin-bottom: 70px; }
+  .blog-article::after {
     content: "";
     background-color: #373e42;
     opacity: 0.071;
     width: 100%;
     height: 5px;
-    margin-top: 70px;
     display: inline-block; }
-
-.blog-article {
-  text-align: justify; }
 
 .blog-article:last-child {
   margin-bottom: 200px; }
+  .blog-article:last-child::after {
+    content: "";
+    display: none; }
+
+.articles__link-tablets {
+  color: #fff;
+  opacity: .7;
+  font-family: "robotoregular";
+  z-index: 1; }
+  .articles__link-tablets:hover {
+    color: #fff;
+    opacity: 1;
+    font-family: "robotobold"; }
 
 /*# sourceMappingURL=blog.css.map*/

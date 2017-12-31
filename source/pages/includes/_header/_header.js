@@ -7,28 +7,30 @@ export default function() {
 			leftSide = document.querySelector('.menu-open__left'),
 			rightSide = document.querySelector('.menu-open__right');
 
-
-	console.log(hamburger);
 	function action() {
 		hamburger.classList.toggle('is-active');
-		console.log("Работает")
-		// menu.classList.toggle('visuallyHidden');
 		if (hamburger.classList.contains('is-active')) {
+			setTimeout(function(){
+				menuList.style.top = 20 + "%";
+			}, 500);
+			setTimeout(function(){
+				menuList.style.opacity = 1;
+			}, 1000);
+			menu.style.opacity = 1;
+			menu.style.zIndex = 2;
 			leftSide.style.left = 0;
 			rightSide.style.right = 0;
-			menu.style.opacity = 1;
 			document.body.style.overflow = 'hidden';
-			menu.style.zIndex = 2;
-			menuList.style.top = 20 + "%";
+
 		} else {
 			leftSide.style.left = -900+"px";
 			rightSide.style.right = -900+"px";
 			document.body.style.overflow = 'visible';
 			menu.style.zIndex = 0;
 			menu.style.opacity = 0;
-			menuList.style.top = 120 + "%";
+			menuList.style.top = -100 + "%";
+			menuList.style.opacity = 0;
 		}
-
 	}
 
 	hamburger.addEventListener('click', action);
