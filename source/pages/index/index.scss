@@ -278,6 +278,7 @@ body {
 	top: 0;
 	left: 0;
 	transform: rotateY(180deg);
+	z-index: 2;
   // @include phones() {
 		// max-width: 80%;
   // }
