@@ -630,8 +630,8 @@ body {
       max-width: 300px; } }
 
 .rotated {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg); }
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg); }
 
 .auth {
   margin: 0 auto;
