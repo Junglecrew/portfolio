@@ -632,14 +632,16 @@ body {
       max-width: 300px; } }
 
 .rotated {
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg); }
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
 
 .auth {
   margin: 0 auto;
   width: 100%;
   height: 100%;
   position: relative;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d; }
   .auth__intro {
