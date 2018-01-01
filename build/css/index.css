@@ -595,7 +595,7 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 95vh;
+  height: 100vh;
   position: relative; }
 
 .auth-button {
