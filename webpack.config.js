@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 
 const PATHS = {
@@ -30,6 +31,7 @@ module.exports = {
 				filename: './js/[name].js'
 		},
 		plugins: [
+				require('autoprefixer'),
 				// new HtmlWebpackPlugin({
 				// 		filename: '_header.html',
 				// 		chunks: ['_header', 'common'],
@@ -97,18 +99,30 @@ module.exports = {
 												}
 											},
 											{
-												loader:'sass-loader'
+												loader: 'postcss-loader',
+												options: {
+														plugins: [
+																autoprefixer({
+																		browsers:['ie >= 9', 'last 2 version']
+																})
+														],
+														sourceMap: true
+												}
+											},
+
+											{
+												loader: 'sass-loader'
 											}
 										]
 								})
 						},
 						{
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: 'css-loader'
-                })
-            },
+								test: /\.css$/,
+								use: ExtractTextPlugin.extract({
+										fallback: 'style-loader',
+										use: 'css-loader'
+								})
+						},
 						// {
 						// 		test: /\.js$/,
 						// 		enforce: "pre",
