@@ -11,6 +11,38 @@ block content
 				| Авторизоваться
 			.flip
 				.auth
+					.auth__intro
+						.avatar.auth__avatar
+							.avatar__pic(style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%")
+							img.visuallyHidden(src=require("../../img/main-avatar.jpg"))
+							//- img.visuallyHidden(src=require("../../img/water.jpg"))
+							//- img.visuallyHidden(src=require("../../img/water-maps.jpg"))
+						.auth__name
+							| Дмитрий Петров
+						.auth__descr
+							| Личный сайт веб разработчика
+						.auth__socials
+							.socials.socials__index
+								ul.social__list
+									li.social__item 
+										a(href='./work.html')
+											+icon('vk','standard-mod')
+									li.social__item 
+										+icon('github','standard-mod')
+									li.social__item 
+										+icon('in','standard-mod')
+						.auth-intro__buttons
+							ul.buttons__list
+								li.buttons__item 
+									a(href='./work.html').buttons__link
+										| Мои работы
+								li.buttons__item
+									a(href='./about.html').buttons__link
+										| Обо мне
+								li.buttons__item
+									a(href='./blog.html').buttons__link
+										|Блог
+						.test-block
 					.auth__backside
 						form.auth-form
 							.subtitle.subtitle__intro
@@ -48,38 +80,7 @@ block content
 									button(type="button" class="btn" onclick="location.href='./about.html';")
 										span: | На главную
 									button(type="submit" class="btn")
-										span: | Войти
-					.auth__intro
-						.avatar.auth__avatar
-							.avatar__pic(style="background-image: url('images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%")
-							img.visuallyHidden(src=require("../../img/main-avatar.jpg"))
-							//- img.visuallyHidden(src=require("../../img/water.jpg"))
-							//- img.visuallyHidden(src=require("../../img/water-maps.jpg"))
-						.auth__name
-							| Дмитрий Петров
-						.auth__descr
-							| Личный сайт веб разработчика
-						.auth__socials
-							.socials.socials__index
-								ul.social__list
-									li.social__item 
-										+icon('vk','standard-mod')
-									li.social__item 
-										+icon('github','standard-mod')
-									li.social__item 
-										+icon('in','standard-mod')
-						.auth-intro__buttons
-							ul.buttons__list
-								li.buttons__item 
-									a(href='./work.html').buttons__link
-										| Мои работы
-								li.buttons__item
-									a(href='./about.html').buttons__link
-										| Обо мне
-								li.buttons__item
-									a(href='./blog.html').buttons__link
-										|Блог
-						.test-block
+										span: | Войти		
 					
 		.wellcome-footer
 			.wellcome-footer__text © Дмитрий Петров | создано с любовью в LoftSchool | 2017
