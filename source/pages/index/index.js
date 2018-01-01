@@ -12,6 +12,7 @@ console.log('in index.js');
 var authBtnTrigger = document.querySelector('.auth-button');
 var flip = document.querySelector('.auth');
 var form = document.querySelector('.container');
+var rotateTarget = document.querySelector('.auth-form');
 
 function rotate(event) {
   flip.classList.add('rotated');
@@ -20,8 +21,11 @@ function rotate(event) {
 }
 
 window.onclick = function(event) {
-  var target = event.target; // где был клик?
-  if (target == form ) {
+  var target = event.target;
+  console.log(target);
+  console.log(rotateTarget);
+  console.log(authBtnTrigger); // где был клик?
+  if (target == form) {
     flip.classList.remove('rotated');
     authBtnTrigger.style.opacity ='1';
     authBtnTrigger.style.cursor ='pointer';
