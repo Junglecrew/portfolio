@@ -114,6 +114,7 @@ body {
 	position: relative;
 	transition: 0.6s;
 	transform-style: preserve-3d;
+  perspective: 1000;
 	
 
 	&__intro {
