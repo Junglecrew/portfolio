@@ -22,9 +22,7 @@ function rotate(event) {
 
 window.onclick = function(event) {
   var target = event.target;
-  console.log(target);
-  console.log(rotateTarget);
-  console.log(authBtnTrigger); // где был клик?
+  console.log(target); // где был клик?
   if (target == form) {
     flip.classList.remove('rotated');
     authBtnTrigger.style.opacity ='1';
