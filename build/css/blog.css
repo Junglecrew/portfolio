@@ -921,17 +921,16 @@ h1, h2, h3 {
   .articles__item:first-child {
     margin-top: 0; }
 
-.articles__item.active::after {
-  content: "";
-  border-right: 4px solid #4e8839;
-  margin-left: 20px;
-  position: absolute;
-  height: 22px; }
-
 .articles__item.active a {
   color: #4e8839;
   font-family: "robotobold";
   position: relative; }
+  .articles__item.active a::after {
+    content: "";
+    border-right: 4px solid #4e8839;
+    margin-left: 20px;
+    position: absolute;
+    height: 22px; }
 
 .articles__title {
   color: #455a64; }

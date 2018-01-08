@@ -167,18 +167,16 @@
 	}
 }
 
-.articles__item.active {
+.articles__item.active a {
+	color: $lightgreen;
+	font-family: $bold;
+	position: relative;
 	&::after {
 		content: "";
 		border-right: 4px solid $lightgreen;
 		margin-left: 20px;
 		position: absolute;
 		height: 22px;
-	}
-	a {
-	color: $lightgreen;
-	font-family: $bold;
-	position: relative;
 	}
 }
 
