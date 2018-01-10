@@ -618,113 +618,54 @@ h1, h2, h3 {
     fill: #6c9c5a;
     cursor: pointer; }
 
-* {
-  font-size: 16px;
-  font-family: "robotoregular";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  outline: none; }
-
-blockquote p {
-  font-family: "robotolight_italic"; }
-
-cite {
-  font-family: "robotobold_italic"; }
-  cite:before {
-    content: "\2014"; }
-
-a {
-  font-family: "robotomedium";
-  color: #6da3bd;
-  text-decoration: underline; }
-  a:hover {
-    text-decoration: none;
-    cursor: pointer; }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0; }
-
-h1, h2, h3 {
-  font-weight: 300; }
-
-.visuallyHidden {
+.preloader {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 0.0625rem;
-  width: 0.0625rem;
-  margin: -0.0625rem;
-  padding: 0;
-  border: 0;
-  opacity: 0; }
-
-.menu-open {
+  width: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  overflow: hidden;
-  width: 100%;
-  -webkit-transition: 1s;
-  transition: 1s;
-  opacity: 0; }
-  .menu-open__left {
-    position: absolute;
-    top: 0;
-    left: -900px;
-    width: 50%;
-    height: 100vh;
-    -webkit-transition: 1s;
-    transition: 1s;
-    background-color: rgba(126, 168, 109, 0.9); }
-  .menu-open__right {
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: -900px;
-    width: 50%;
-    -webkit-transition: 1s;
-    transition: 1s;
-    background-color: rgba(126, 168, 109, 0.9); }
+  z-index: 999;
+  background-color: #6c9c5a; }
+  .preloader.done {
+    z-index: -999; }
+  .preloader__percents {
+    text-align: center;
+    font-size: 20px;
+    color: white; }
+  .preloader svg {
+    width: 80px;
+    height: 95px;
+    stroke: #fff; }
 
-.icon {
-  height: 22px;
-  width: 30px;
-  -webkit-transition: .2s;
-  transition: .2s; }
-  .icon.standard-mod {
-    fill: #8e9c99; }
-  .icon.white-mod {
-    fill: #fff; }
-  .icon.green-mod {
-    fill: #6c9c5a; }
-  .icon.footer-mod {
-    fill: #8e9c99; }
-    .icon.footer-mod:hover {
-      fill: #fff; }
-  .icon.login-main {
-    position: absolute;
-    height: 15px;
-    top: 15px;
-    left: 8px;
-    fill: #c4cbcd; }
-  .icon.password-main {
-    position: absolute;
-    height: 15px;
-    top: 15px;
-    left: 8px;
-    fill: #c4cbcd; }
-  .icon:hover {
-    fill: #6c9c5a;
-    cursor: pointer; }
+.first-wave {
+  -webkit-animation: dash 2s cubic-bezier(0.35, 0.94, 0.72, 0.21) infinite;
+          animation: dash 2s cubic-bezier(0.35, 0.94, 0.72, 0.21) infinite; }
+
+.second-wave {
+  -webkit-animation: dash 1.6s cubic-bezier(0.35, 0.94, 0.72, 0.21) infinite;
+          animation: dash 1.6s cubic-bezier(0.35, 0.94, 0.72, 0.21) infinite; }
+
+.third-wave {
+  -webkit-animation: dash 1.4s cubic-bezier(0.35, 0.94, 0.72, 0.21) infinite;
+          animation: dash 1.4s cubic-bezier(0.35, 0.94, 0.72, 0.21) infinite; }
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 200; }
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 200; }
+  to {
+    stroke-dashoffset: 0; } }
 
 .menu-open__list {
   display: -webkit-box;

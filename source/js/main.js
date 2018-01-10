@@ -1,12 +1,4 @@
-import hamburger from '../pages/includes/_header/_header.js';
-hamburger();
-
-console.log('in main.js');
-
-var arrowDown = document.querySelector('.arrow-down');
-
-
-//Функция скролла вниз при клике на стрелку
+// Функция скролла вниз при клике на стрелку
 function scrollDown(e) {
 	e.preventDefault();
 	var height = window.innerHeight;
@@ -18,5 +10,14 @@ function scrollDown(e) {
 	    })(i);
 	}
 }
-arrowDown.addEventListener('click', scrollDown)
 
+var arrowDown = document.querySelector('.arrow-down');
+	if (arrowDown) {
+		arrowDown.addEventListener('click', scrollDown)
+	}
+
+import preloader from '../js/modules/preloader';
+preloader();
+
+import hamburger from '../pages/includes/_header/_header.js';
+hamburger();

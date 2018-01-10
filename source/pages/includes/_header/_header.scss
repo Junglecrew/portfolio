@@ -1,5 +1,24 @@
-@import '../../../style/main.scss'; 
+// @import '../../../style/main.scss'; 
+$green: #6c9c5a;
+$lightgreen: #4e8839;
+$darkgreen: #566358;
+$gray: #373e42;
+$error: #e44845;
 
+	//Шрифты
+$mainfont: 'robotoregular';
+$mediumfont: 'robotomedium';
+$titles: 'sansus_webissimoregular';
+$light: 'robotolight';
+$lightitalic: 'robotolight_italic';
+$bold: 'robotobold';
+$bolditalic: 'robotobold_italic';
+$italic: 'robotoitalic';
+
+$desktop: 75rem;
+$laptop: 1200px;
+$tablets: 768px;
+$phones: 550px;
 
 .menu-open {
 	&__list {
