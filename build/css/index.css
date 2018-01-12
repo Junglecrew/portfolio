@@ -1125,5 +1125,3 @@ input[type="radio"]:checked + label .custom + .answer {
   src: url(../css/fonts/sansus-webissimo-regular.woff2) format("woff2"), url(../css/fonts/sansus-webissimo-regular.woff) format("woff"), url(../css/fonts/sansus-webissimo-regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
-
-/*# sourceMappingURL=index.css.map*/
