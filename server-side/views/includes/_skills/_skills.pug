@@ -1,0 +1,37 @@
+
+ul.skills-list
+	li.skills-row
+		.skills-row__title Frontend
+		ul.skills-row__list
+			each skill in skills
+				if skill.type == 1
+					li.skills-row__item
+						.skill
+							svg(viewBox="0 0 110 110").skill__circle
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle-${skill.percents}`)
+							.skill__title= skill.name
+	li.skills-row
+		.skills-row__title Backend
+		ul.skills-row__list
+			each skill in skills
+				if skill.type == 2
+					li.skills-row__item
+						.skill
+							svg(viewBox="0 0 110 110").skill__circle
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle-${skill.percents}`)
+						.skill__title= skill.name
+	li.skills-row
+		.skills-row__title WorkFlow
+		ul.skills-row__list
+			each skill in skills
+				if skill.type == 3
+					li.skills-row__item
+						.skill
+							svg(viewBox="0 0 110 110").skill__circle
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle-${skill.percents}`)
+						.skill__title= skill.name
+
+

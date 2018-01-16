@@ -1,0 +1,155 @@
+extends ../base
+block variables
+	- name = 'Дмитрий Петров'
+	- descr = 'Личный сайт веб разработчика'
+block head
+	head
+		meta(charset="UTF-8")
+		title Мои работы
+		link(href="/css/work.css" rel="stylesheet")
+		link(href="/css/main.css" rel="stylesheet")
+		link(href="/css/slider.css" rel="stylesheet")
+	
+block content
+	body
+		header.works-header
+			block header
+			include ../includes/_header/_header
+			.arrow-down.arrow-down__works
+				a(href="#"): +icon('arrow_down')
+			.figure-cut
+				include ../../images/bg.svg
+		.title-container
+			.section-title.section-title_works
+				h1.section-title__text
+					|Мои работы
+				.section-title__shadow.section-title__shadow_about-section
+					+shadowTitle('works_header','header_style')
+		.slider.slider__display 
+			ul.slider__list
+				li.slider__item.slider__item_active
+					.slider__image
+						.slider__pic.slider__pic-avia
+					.slider__info
+						.subtitle
+							.subtitle__text Сайт авиакомпании
+						.slider__desc Html, css, javascript
+						a.slider__link(href="#")
+							button(type="button").button.slider__link-button
+								img.slider__link-pic(src="/images/link.svg", alt="link")
+								.slider__link-text Посмотреть сайт
+				li.slider__item
+					.slider__image
+						.slider__pic.slider__pic-burger
+					.slider__info
+						.subtitle
+							.subtitle__text Landing page для бургерной
+						.slider__desc Html, css, javascript            
+						a.slider__link(href="#")
+								button(type="button").button.slider__link-button
+									img.slider__link-pic(src="/images/link.svg", alt="link")
+									.slider__link-text Посмотреть сайт
+				li.slider__item
+						.slider__image
+							.slider__pic.slider__pic-portfolio
+						.slider__info
+							.subtitle
+								.subtitle__text Сайт-портфолио
+							.slider__desc Javascript, vue.js, node.js
+							a.slider__link
+								button(type="button").button.slider__link-button
+									img.slider__link-pic(src="/images/link.svg", alt="link")
+									.slider__link-text Вы здесь
+				nav.slider-nav
+					ul.slider-nav__list
+						li.slider-nav__item.slider-nav__item_active(data-scroll-to='0')
+						li.slider-nav__item(data-scroll-to='1')
+						li.slider-nav__item(data-scroll-to='2')
+				.slider__buttons
+					a.slider__controls.slider__controls_previous 
+						svg.slider__controls_previous-pic
+							use(xlink:href='/images/slider-sprite.svg#arrow_down')
+					a.slider__controls.slider__controls_next
+						svg.slider__controls_next-pic
+							use(xlink:href='/images/slider-sprite.svg#arrow_down')
+		section.reviews-section
+			.section-title
+				h2.section-title__text
+					|Что обо мне говорят
+				.section-title__shadow.section-title__shadow_about-section
+					+shadowTitle('about_header','header_style')
+			.reviews
+				ul.reviews__list
+					li.reviews__item
+						.reviews__avatar
+							.reviews__pic(style="background-image: url('images/rev_ava_1.jpg'); background-size: cover;")
+							img.visuallyHidden(src="/images/rev_ava_1.jpg")
+						.reviews__text
+							|Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей
+						.reviews__author
+							.reviews__name
+								| Ковальчук Дмитрий
+							.reviews__occ
+								| основатель LoftScool
+					li.reviews__item
+						.reviews__avatar
+							.reviews__pic(style="background-image: url('images/rev_ava_2.jpg'); background-size: cover;")
+							img.visuallyHidden(src="/images/rev_ava_2.jpg")
+						.reviews__text
+							|Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+						.reviews__author
+							.reviews__name
+								|Сабанцев Владимир
+							.reviews__occ
+								| преподаватель
+
+			.feedback
+				.feedback__title
+					.subtitle
+						h3.subtitle__text
+							| Связаться со мной
+				form.feedback-form(action="/work/contact" method="POST" enctype="application x-www-form-urlencoded")
+					.feedback-form__elem
+						label(label for="feedback-name" name="name" class="feedback-form__label")
+						input(name="name" type="text" id="feedback-name" class="feedback-form__input" placeholder="Имя")
+					.feedback-form__elem
+						label(label for="feedback-email" class="feedback-form__label")
+						input(name="email" type="text" id="feedback-email" class="feedback-form__input" placeholder="Email")
+					.feedback-form__textarea
+						label(for="comment" class="feedback-form__label")
+						textarea(name="text" id="comment" class="feedback-form__input feedback-form__input--comment" placeholder="Ваше сообщение")
+					.feedback-form__controls
+							button(type="submit" class="btn")
+								span: | Отправить
+							button(type="reset" class="btn")
+								span: | Очистить
+
+			include ../includes/_footer/_footer
+	
+
+	
+		script(type="text/javascript" src="/js/common.js")
+		script(type="text/javascript" src="/js/work.js")
+		script(type="text/javascript" src="/js/main.js")
+		script(type="text/javascript" src='/js/jquery.min.js')
+		script(type="text/javascript" src='/js/anmtxt.js')
+		script(type="text/javascript" src='/js/slider.js')
+
+
+		//- section.works-slider
+		//- 	.works-slider__left
+		//- 		.works-slider__content
+		//- 			.works-slider__content-wrapper
+		//- 				.works-slider__display
+		//- 					img.works-slider__display-pic(src='', alt='')    
+		//- 				.works-slider__item-about
+		//- 					.works__subtitle
+		//- 						.subtitle
+		//- 					|               
+		//- 					.works__content-desc
+		//- 					|               
+		//- 					.works__content-btn
+		//- 						a.works__content-view(href='#')
+		//- 							i.fa.works__content-view-icon.fa-link
+		//- 							|  &Pcy;&ocy;&scy;&mcy;&ocy;&tcy;&rcy;&iecy;&tcy;&softcy; &scy;&acy;&jcy;&tcy;			
+		//- 	.works-slider__right

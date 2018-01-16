@@ -1,0 +1,21 @@
+{
+  "db": {
+    "host": "ds251747.mlab.com",
+    "port": "51747",
+    "name": "heroku_dtslsxx2",
+    "user": "root",
+    "password": "Petuwok1"
+  },
+  "mail": {
+    "subject": "Сообщение с сайта-портфолио",
+    "smtp": {
+      "host": "smtp.gmail.com",
+      "port": 465,
+      "secure": true,
+      "auth": {
+        "user": "webinar.loft.adv@gmail.com",
+        "pass": "Petuwok1"
+      }
+    }
+  }
+}
