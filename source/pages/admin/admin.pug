@@ -1,0 +1,37 @@
+extends ../base
+
+block head
+	head
+        meta(charset="UTF-8")
+        title Страница администрирования
+
+block content
+    body
+        .wrapper-admin
+            .header
+                .container
+                    h1.section-title__text.section-title__text-admin Панель администрирования
+                    .header__back
+                        a.header__link(href="/") Вернуться на сайт
+            .tabs
+                ul.tabs__list
+                    li.tabs__item.active TAB 1
+                    li.tabs__item TAB 2
+            .col
+                .form-container
+                    .form-container__title Страница БЛОГ
+                    form.blog-form#blog(action='/admin/blog' method="POST" enctype="application/x-www-form-urlencoded")
+                        .form__subtitle Добавить запись
+                        label.form__input-line
+                        input(name="title" type="text" placeholder="Заголовок").form__input
+                        label.form__input-line
+                            - 
+                                var data = new Date().toLocaleDateString('ru', { 
+                                            year: 'numeric', 
+                                            month: '2-digit', 
+                                            day: '2-digit'
+                                            })
+                        input(name="date" type="date" value=`${data}`).form__input
+                        textarea(placeholder="Ваша запись" name="text").form__textarea-blog
+                        .form__btns.form__input-line
+                            input(name="" type="submit" value="Добавить").form__btn-send

@@ -27,6 +27,7 @@ const devConfig = {
 				'blog': PATHS.source + '/pages/blog/blog.js',
 				'work': PATHS.source + '/pages/work/work.js',
 				'about': PATHS.source + '/pages/about/about.js',
+				'admin': PATHS.source + '/pages/admin/admin.js',
 				'main': PATHS.source + '/js/main.js',
 				'webgl': PATHS.source + '/pages/index/water.js'
 				// 'header': PATHS.source + '/pages/includes/_header/_header.js'
@@ -62,6 +63,11 @@ const devConfig = {
 						filename: 'about.html',
 						chunks: ['about', 'common', 'main'],
 						template: PATHS.source + '/pages/about/about.pug'
+				}),
+				new HtmlWebpackPlugin({
+					filename: 'admin.html',
+					chunks: ['admin', 'common', 'main'],
+					template: PATHS.source + '/pages/admin/admin.pug'
 				}),
 				new CleanWebpackPlugin('build'),
 				new ExtractTextPlugin('./css/[name].css'), 
@@ -165,6 +171,7 @@ const prodConfig = {
 			'blog': PATHS.source + '/pages/blog/blog.js',
 			'work': PATHS.source + '/pages/work/work.js',
 			'about': PATHS.source + '/pages/about/about.js',
+			'admin': PATHS.source + '/pages/admin/admin.js',
 			'main': PATHS.source + '/js/main.js',
 			'webgl': PATHS.source + '/pages/index/water.js'
 			// 'header': PATHS.source + '/pages/includes/_header/_header.js'
@@ -199,10 +206,17 @@ const prodConfig = {
 			new HtmlWebpackPlugin({
 					filename: 'views/about/about.pug',
 					chunks: ['about', 'common', 'main'],
+					enject: 'head',
 					template: PATHS.source + '/pages/about/about.pug'
 			}),
+			new HtmlWebpackPlugin({
+				filename: 'views/admin/admin.pug',
+				chunks: ['admin', 'common', 'main'],
+				enject: 'head',
+				template: PATHS.source + '/pages/admin/admin.pug'
+			}),
 			new HtmlWebpackPugPlugin(),
-			new CleanWebpackPlugin('build'),
+			// new CleanWebpackPlugin('build'),
 			new ExtractTextPlugin('./css/[name].css'), 
 			new webpack.optimize.CommonsChunkPlugin({
 					name: 'common'
