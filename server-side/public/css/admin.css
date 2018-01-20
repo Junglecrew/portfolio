@@ -779,6 +779,7 @@ h1, h2, h3 {
   background-image: url(../images/main_bg_admin.jpg);
   background-size: cover;
   position: relative;
+  display: flex;
   height: 100%; }
 
 .form-container {
@@ -854,3 +855,42 @@ h1, h2, h3 {
   cursor: pointer; }
   .form__btn-send:hover {
     background-color: #4e8839; }
+
+
+.articles {
+  margin-left: 25px;
+}
+
+.articles h2 {
+  font-family: 'robotomedium';
+  margin: 45px 0;
+  font-size: 21px;
+  color: #566358;
+}
+
+.articles__item {
+  height: 40px;
+}
+
+.articles__link {
+  text-decoration: none;
+  color: #6E9C5C;
+}
+
+.articles__link:hover {
+  color: #618752;
+}
+
+.article__delete {
+  margin-left: 15px;
+  height: 30px;
+  background-color: #6E9C5C;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.article__delete:hover {
+  background-color: #618752;
+}

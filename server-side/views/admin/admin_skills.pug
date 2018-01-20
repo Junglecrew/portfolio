@@ -7,7 +7,7 @@ block head
 		link(href="/css/admin.css" rel="stylesheet")
 		link(href="/css/main.css" rel="stylesheet")
 block content
-	body
+		body
 			.wrapper-admin
 				.header
 					.container
@@ -36,16 +36,6 @@ block content
 							textarea(placeholder="Ваша запись" name="text").form__textarea-blog
 							.form__btns.form__input-line
 								input(name="" type="submit" value="Добавить").form__btn-send
-					.articles
-						h2|Список всех статей
-						table.articles__list
-							each article in articles
-									tr.articles__item
-										td
-											a(class='articles__link',href='#')= article.title
-										td
-											input(action = "#"name=`${article._id}` type="submit" value="Удалить").article__delete
-
 			script(type="text/javascript" src="/js/common.js")
 			script(type="text/javascript" src="/js/admin.js")
 			script(type="text/javascript" src="/js/main.js")

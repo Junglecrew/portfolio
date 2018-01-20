@@ -15,7 +15,10 @@ block content
 					| Авторизоваться
 				.flip
 					.auth
+						if (msg)
+							.status= msg
 						.auth__intro
+
 							.avatar.auth__avatar
 								.avatar__pic(style="background-image: url('/images/main-avatar.jpg'); background-position: 44% 0%;  background-size: 150%")
 								img.visuallyHidden(src="/images/main-avatar.jpg")
@@ -50,20 +53,20 @@ block content
 											|Блог
 							.test-block
 						.auth__backside
-							form.auth-form
+							form.auth-form#login(action="/login" method="POST")
 								.subtitle.subtitle__intro
 									h3.subtitle__text
 										| Авторизуйтесь
 								.auth-form__elem.auth-form__elem_login
 									+icon('login','login-main')
-									label(label for="login" name="login" class="auth-form__label")
-									input(type="text" name ='login' id="auth-login" class="auth-form__input" placeholder="Логин" required='true')
+									label(label for="login" class="auth-form__label")
+									input(type="text" name ='login' id="auth-login" class="auth-form__input" placeholder="Логин" )
 								.auth-form__elem.auth-form__elem_password
 									+icon('password','password-main')
-									label(label for="password" name="password" class="auth-form__label")
-									input(type="password" name ='password' id="auth-password" class="auth-form__input" placeholder="Пароль" required='true')
+									label(label for="password" class="auth-form__label")
+									input(type="password" name ='password' id="auth-password" class="auth-form__input" placeholder="Пароль")
 								.auth-form__check
-									input(type="checkbox" name="capcha" id="ch" class="auth-form__checkbox-name" required='true')
+									input(type="checkbox" name="capcha" id="ch" class="auth-form__checkbox-name" )
 									label(for="ch" class="auth-form__checkbox")
 										span
 										|Я человек

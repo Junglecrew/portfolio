@@ -1,13 +1,13 @@
 const http = require('request');
-
-const apiOptions = {
-  server: "https://portfolio-adv.herokuapp.com"
-}
+const config = require('../config/config.json')
+// const apiOptions = {
+//   server: "https://portfolio-adv.herokuapp.com"
+// }
 
 module.exports.getBlogPage = (req, res) => {
   const pathAPI = '/api/blog';
   const requestOptions = {
-    url: apiOptions.server + pathAPI,
+    url: config.server.address + pathAPI,
     method: 'GET'
   };
   let sendObj = {

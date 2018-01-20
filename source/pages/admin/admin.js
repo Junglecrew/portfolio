@@ -19,7 +19,6 @@ var changeTab = function() {
 		tab[0].classList.add('active');
 		tab[1].classList.remove('active');
 	}
-
 }
 
 tabs.addEventListener('click', changeTab);

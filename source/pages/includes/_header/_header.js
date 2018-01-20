@@ -33,5 +33,7 @@ export default function() {
 		}
 	}
 
-	hamburger.addEventListener('click', action);
-}
+	if (hamburger) {
+		hamburger.addEventListener('click', action);
+		}
+	};

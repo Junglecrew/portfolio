@@ -17,5 +17,8 @@
         "pass": "Petuwok1"
       }
     }
+  },
+  "server": {
+    "address": "http://localhost:3000"
   }
 }
